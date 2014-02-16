@@ -8,7 +8,7 @@ function setplot is called to set the plot parameters.
 """ 
 
 #--------------------------
-def setplot(plotdata):
+def setplot(plotdata=None):
 #--------------------------
     
     """ 
@@ -18,6 +18,14 @@ def setplot(plotdata):
     
     """ 
 
+    if plotdata is None:
+        from clawpack.visclaw.data import ClawPlotData
+        plotdata = ClawPlotData()
+        try: 
+            outdir = open('.output').readline().strip()
+        except: 
+            outdir = '.'
+        plotdata.outdir = outdir
 
     plotdata.clearfigures()  # clear any old figures,axes,items data
 
