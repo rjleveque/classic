@@ -284,7 +284,7 @@ c                                            and right state ql(:,i)
 c         In the standard clawpack routines, this Riemann solver is
 c         called with ql=qr=q along this slice.  More flexibility is allowed
 c         in case the user wishes to implement another solution method
-c         that requires left and rate states at each interface.
+c         that requires left and right states at each interface.
 
 c         If method(7)=maux > 0 then the auxiliary variables along this slice
 c         are passed in using auxl and auxr.  Again, in the standard routines
